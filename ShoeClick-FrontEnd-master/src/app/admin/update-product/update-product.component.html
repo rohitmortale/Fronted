@@ -1,0 +1,106 @@
+<div class="bootstrap-wrapper">
+    <div class="container-fluid">
+        <div class="container">
+            <div class="card-group">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- productName: '',
+                        size: '',
+                        actualPrice: 0,
+                        discountedPrice: 0,
+                        discountPercentage: 0,
+                        Availibility: false -->
+                        <div class="col-md-6 offset-md-3">
+
+                            <h3 class="text-center">Product Details</h3>
+                            <!-- {{ product | json }} -->
+                            <form (ngSubmit)="addProduct()">
+                                <!-- username field -->
+                                <div class="row">
+                                    <mat-form-field class="full-width " appearance="outline">
+                                        <mat-label>Product Name</mat-label>
+                                        <!-- [(ngModel)]="loginData.username" -->
+                                        <input name="productName" type="text" required matInput placeholder="Enter here"
+                                            [(ngModel)]="product.productName  " />
+                                    </mat-form-field>
+                                </div>
+
+                                <div class="row">
+                                    <mat-form-field appearance="fill">
+                                        <mat-label>Select Category</mat-label>
+                                        <mat-select name="category" [(ngModel)]="product.category.cid" required>
+                                            <mat-option *ngFor="let c of categories" [value]="c.cid"  >
+                                                {{c.title}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+
+                                <div class="row">
+                                    <mat-form-field class="full-width" appearance="outline">
+                                        <mat-label>Actual Price</mat-label>
+                                        <input name="actualPrice" type="number" id="actualPrice" required matInput
+                                            placeholder="Enter here" [(ngModel)]="product.actualPrice  " />
+                                    </mat-form-field>
+                                </div>
+                                <div class="row mb20">
+                                    <mat-form-field class="full-width" appearance="outline">
+                                        <mat-label>Discount Percentage</mat-label>
+                                        <input name="discountPercentage" type="number" id="discPer" required matInput
+                                            placeholder="Enter here" (change)="calDiscountedPrice()"
+                                            [(ngModel)]="product.discountPercentage " />
+                                        <mat-hint>Without % Symbol</mat-hint>
+                                    </mat-form-field>
+                                </div>
+                                <div class="row">
+                                    <mat-form-field class="full-width" appearance="outline">
+                                        <mat-label>Discounted Price</mat-label>
+                                        <input name="discountedPrice" type="number" id="discountedPrice" disabled="true"
+                                            required matInput placeholder="Enter here"
+                                            [(ngModel)]="product.discountedPrice  " />
+                                    </mat-form-field>
+                                </div>
+
+                                <div class="container text-center">
+                                    <button mat-raised-button color="primary" type="submit">
+                                        Update
+                                    </button>
+
+                                </div>
+
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="card center">
+                    <div class="card-body">
+                        <!-- [(ngModel)]="loginData.username" -->
+                        <h3 class="text-center">Upload Product Images</h3>
+                        <input class="text-center" name="productName" type="file" multiple value="select" #selectFile
+                            (change)="onFileSelected($event)" required placeholder="Enter here" />
+
+
+                        <div class="mt-5">
+                            <div class="row">
+                                <mat-grid-list cols="4" rowHeight="1:1">
+                                    <mat-grid-tile *ngFor="let file of product.productImages; let i = index; ">
+                                        <div style="position: relative;">
+                                            <span class="btn-remove-img" (click)="removeImage(i)">
+                                                x
+                                            </span>
+                                            <img *ngIf="checkFile(i) " src="data:image/png;base64,{{file.picByte}}" alt="" width="100px" height="100px">
+                                            <img *ngIf="!checkFile(i) " [src]="file.url" alt="" width="100px" height="100px">
+                                        </div>
+                                    </mat-grid-tile>
+
+                                </mat-grid-list>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

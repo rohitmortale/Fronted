@@ -1,0 +1,29 @@
+.productTitle{
+    text-decoration: solid;
+    font-weight: bold;
+    font-size: 36px;
+    font-family: sans-serif;
+}
+
+.productPrice{
+    text-decoration: solid;
+    font-size: 30px;
+    color: rgb(81, 136, 219);
+    font-family: sans-serif;
+}
+.productPercentage{
+    color: rgb(81, 136, 219);
+    font-family: sans-serif; 
+}
+
+.product-zoom-image{
+    max-height: 90%;
+    max-width: 90%;
+    /* position: absolute; */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto
+
+}

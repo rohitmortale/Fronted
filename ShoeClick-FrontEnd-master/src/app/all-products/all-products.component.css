@@ -1,0 +1,202 @@
+/* body {
+    background-color: #fff !important;
+} */
+
+.single-product {
+    margin-bottom: 50px;
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ececec;
+}
+
+/* div {
+    display: block;
+} */
+
+.product-img-block {
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+element.style {}
+
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+user agent stylesheet i {
+    font-style: italic;
+}
+
+.single-product .product-details .price h6 {
+    font-size: 18px;
+    display: inline-block;
+    padding-right: 10px;
+    margin: 0;
+    font-weight: 700;
+}
+
+.single-product .product-details .price .l-through {
+    text-decoration: line-through;
+    color: #cccccc;
+    margin-bottom: 0;
+}
+
+.single-product .product-details .price h6 {
+    font-size: 18px;
+    display: inline-block;
+    padding-right: 10px;
+    margin: 0;
+    font-weight: 700;
+}
+
+.single-product .product-details h6 {
+    font-size: 16px;
+    text-transform: capitalize;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.primary-btn {
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    padding: 0 30px;
+    line-height: 40px;
+    border: none;
+    /* border-radius: 50px; */
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    text-align: center;
+}
+
+.btn-whatsapp {
+    font-size: 14px !important;
+    text-transform: capitalize !important;
+    background: #4fce5d !important;
+    font-weight: 600 !important;
+}
+
+.mt-3,
+.my-3 {
+    margin-top: 1rem !important;
+}
+
+.w-100 {
+    width: 100% !important;
+}
+
+.col-lg-3 {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.card-columns {
+    @include media-breakpoint-only(lg) {
+        column-count: 4;
+    }
+
+    @include media-breakpoint-only(xl) {
+        column-count: 5;
+    }
+}
+
+:root {
+    --cardWidth: 240px;
+    --cardHeight: 280px;
+    --cardMargin: 16px;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+    width: 100%;
+}
+
+h1 {
+    margin: 0;
+    padding: 8px 48px;
+    background: rgb(250, 250, 250);
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+}
+
+.main-section {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    /* background: #bbb; */
+}
+
+.card {
+    width: var(--cardWidth);
+    height: var(--cardHeight);
+    margin: var(--cardMargin);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+
+.centerMain {
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+}
+
+.img-adjust{
+    height: 200px;
+    width: 200px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}

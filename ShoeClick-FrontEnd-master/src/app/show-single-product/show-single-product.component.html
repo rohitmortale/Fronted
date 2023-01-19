@@ -1,0 +1,62 @@
+<app-navbar></app-navbar>
+
+<div class="container-fluid" style="margin-top: 30px;">
+    <div class="container">
+        <div class="card-group">
+            <div class="card">
+                <div class="card-body product-zoom-image"  >
+                    <!-- {{i.picByte}} -->
+
+                    <img style="cursor: pointer;" height="300px" class="card-img-top " src="data:image/png;base64,{{prod.productImages[productSelectedIndex].picByte}}"  alt="Card image cap">
+
+
+
+                </div>
+
+                <div class="row">
+                    <mat-grid-list cols="3" rowHeight="1:1">
+                        <mat-grid-tile *ngFor="let fileHandel of prod.productImages; let i = index" >
+                            <div style="position: relative; cursor: pointer; ">
+                                <img src="data:image/png;base64,{{fileHandel.picByte}}" (click)="changeIndex(i)" alt="" width="100px"  style="border: 1px solid grey; padding: 15px;">
+                            </div>
+                        </mat-grid-tile>
+                
+                    </mat-grid-list>
+                </div>
+
+            </div>
+            <div class="card" style="padding-top: 5rem; padding-left: 1rem;">
+
+                <div class="card-body">
+                    <h1 class="productTitle">
+                        {{ prod.productName | uppercase}}
+                    </h1>
+                    <h1 class="">
+                        <span class="productPrice">
+                            &#x20B9; {{ prod.discountedPrice }}
+                        </span>
+                        <span>
+                            <s>
+                                &#x20B9; {{ prod.actualPrice }}
+                            </s>
+                        </span>
+                        <span class="productPercentage" style="padding-bottom: 1rem;">
+                            ({{prod.discountPercentage}}% off)
+                        </span>
+                    </h1>
+                    <mat-divider></mat-divider>
+
+                    
+
+                    <a class="btn btn-style " style="background-color: rgb(97, 250, 50); margin-top: 1.5rem; margin-bottom: 2rem;" [href]="'https://api.whatsapp.com/send?phone=7397870406&amp;text=i am interested in *'+prod.productName+'* of Rs.: '+ prod.actualPrice">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        Inquiry on whatsapp
+                    </a>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<!-- <mat-grid-list cols="4" rowHeight="1:1" *ngFor="let fileHandel of data.images">
+    <mat-grid-tile>
+
+        <div style="height: 100px; width: 100px; position: relative;">
+            <img src="data:image/png;base64,{{fileHandel.picByte}}" height="100%" width="100%">
+        </div>
+
+
+    </mat-grid-tile>
+</mat-grid-list> -->
+
+
+
+<div class="row">
+    <mat-grid-list cols="4" rowHeight="1:1">
+        <mat-grid-tile *ngFor="let fileHandel of data.images">
+            <div style="position: relative;">
+                <img src="data:image/png;base64,{{fileHandel.picByte}}" alt="" width="100px" height="100px">
+            </div>
+        </mat-grid-tile>
+
+    </mat-grid-list>
+</div>

@@ -1,0 +1,48 @@
+<!-- card view -->
+<mat-card >
+    <mat-action-list>
+        <div mat-subheader>Menu</div>
+
+
+        <button mat-list-item class="text-center" routerLink="/admin/add-cat">
+            <!-- icon -->
+            <mat-icon>
+                add
+            </mat-icon>
+            Add Category
+        </button>
+
+
+        <button mat-list-item class="text-center" routerLink="/admin/categories">
+            <!-- icon -->
+            <mat-icon>
+                edit_square
+            </mat-icon>
+            Manage Categories
+        </button>
+
+        <!-- divider line -->
+        <mat-divider></mat-divider>
+
+        <button mat-list-item class="text-center" routerLink="/admin/add">
+            <!-- icon -->
+            <mat-icon>
+                    add
+            </mat-icon>
+            Add Product
+        </button>
+
+        <!-- categories -->
+
+        <button mat-list-item class="text-center" routerLink="/admin/manage">
+            <mat-icon>
+                edit_square
+            </mat-icon>
+            Manage Product
+        </button>
+
+        <mat-divider></mat-divider>
+        <div style="padding-bottom: 100%;"></div>
+
+    </mat-action-list>
+</mat-card>

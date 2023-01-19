@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+
+
+
+
+<div style="margin: auto !important;">
+    <h1 class="text-center ">All Categories</h1>
+    <section class="main-section centerMain">
+        <div class="card" style="width: 18rem; margin: 8px; background: linear-gradient(to top, #6699ff 0%, #ccccff 100%);" *ngFor="let c of categories">
+            <div class="card-body center btn-adjust">
+                
+                <div style="cursor: pointer; " class="row btn-adjust">
+
+                    <button type="button" class="btn btn-secondary" style="width: auto; height: 3rem;" [routerLink]="'/category/' +c.cid">
+                        {{ c.title }}
+                    </button>
+
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+</div>

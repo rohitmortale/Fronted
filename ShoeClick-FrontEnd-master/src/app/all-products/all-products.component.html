@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+
+
+
+
+<div style="margin: auto !important;">
+    <h1 class="text-center">All Products</h1>
+    <section class="main-section centerMain">
+        <div class="card" style="width: 18rem; margin: 8px;" *ngFor="let p of products">
+            <img [routerLink]="'/product/'+p.productId" height="200px" width="150px" style="cursor: pointer; " class="card-img-top img-adjust" src="data:image/png;base64,{{p.productImages[0].picByte}}" alt="Card image cap">
+            <div class="card-body" >
+                <h3 class="card-title" [routerLink]="'/product/'+p.productId" style="cursor: pointer;" >
+                    {{p.productName}}
+                </h3>
+
+                <div class="row">
+                    <h3>
+                        &#x20B9; 3300.00
+                        <br>
+                        <span> <s>
+
+                                &#x20B9; 4999.00
+                            </s>
+                        </span>
+                    </h3>
+                </div>
+            
+                <button type="button" class="btn btn-style " style="background-color: rgb(97, 250, 50);"  [routerLink]="'/product/'+p.productId" >
+                <i class="fa-brands fa-whatsapp"></i>
+                Inquiry on whatsapp
+                </button>
+            </div>
+        </div>
+    </section>
+</div>

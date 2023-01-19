@@ -1,0 +1,14 @@
+.login_box_img img {
+    width: 100%;
+}
+.login_box_img {
+    display: block;
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+}

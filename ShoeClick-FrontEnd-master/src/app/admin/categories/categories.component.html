@@ -1,0 +1,47 @@
+<table class="table table-striped">
+    <!-- table heading -->
+    <thead class="text-center">
+        <tr>
+            <th scope="col">Category Id</th>
+            <th scope="col">Category Name</th>
+            <th scope="col">Category Descreption</th>
+            <th scope="col">Edit</th>
+            <!-- <th scope="col">Delete</th> -->
+        </tr>
+    </thead>
+
+
+    <tbody>
+        <tr *ngFor="let p of categories" class="text-center">
+            <!-- firstname column -->
+            <td scope="col">{{p.cid}} </td>
+            <!-- lastname column -->
+            <td scope="col"> {{p.title}}</td>
+            <!-- mobile column -->
+            <td scope="col">{{p.description}}  </td>
+
+
+
+            <!-- <td scope="col">
+
+                <button type="button"  class="btn btn-success btn-style " [routerLink]="'/admin//'+p.cid">
+                    <mat-icon>
+                        edit
+                    </mat-icon>
+                </button> 
+            </td> -->
+            
+            <td scope="col">
+                <div>
+
+                    <button type="button" class="btn btn-danger btn-style " (click)="deleteCategory(p.cid)">
+                        <mat-icon>
+                            delete
+                        </mat-icon>
+                    </button>
+                </div>
+            </td> 
+        </tr>
+
+    </tbody>
+</table>
